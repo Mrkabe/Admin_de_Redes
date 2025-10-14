@@ -1,6 +1,6 @@
 Building configuration...
 
-Current configuration : 3652 bytes
+Current configuration : 3653 bytes
 !
 ! Last configuration change at 02:17:29 UTC Tue Oct 14 2025
 !
@@ -118,6 +118,9 @@ interface Loopback0
  ip address 1.1.1.1 255.255.255.255
  ip ospf 1 area 0
 !
+interface Loopback1
+ no ip address
+!
 interface Ethernet0/0
  ip address dhcp
  ip ospf 1 area 0
@@ -141,7 +144,7 @@ ip forward-protocol nd
 ip forward-protocol udp
 !
 !
-no ip http server
+ip http server
 ip http secure-server
 ip ssh bulk-mode 131072
 ip ssh time-out 60
@@ -153,7 +156,6 @@ no logging btrace
 control-plane
 !
 !
-banner motd ^CAcceso restringido^C
 !
 line con 0
  logging synchronous
