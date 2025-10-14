@@ -1,0 +1,171 @@
+Building configuration...
+
+Current configuration : 3689 bytes
+!
+! Last configuration change at 01:57:29 UTC Tue Oct 14 2025
+!
+version 17.16
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+!
+hostname R1-7
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no logging console
+no aaa new-model
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name R1.local
+ip cef
+no login on-success log
+no ipv6 cef
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-131184641
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-131184641
+ revocation-check none
+ rsakeypair TP-self-signed-131184641
+ hash sha512
+!
+!
+crypto pki certificate chain TP-self-signed-131184641
+ certificate self-signed 01
+  3082032E 30820216 A0030201 02020101 300D0609 2A864886 F70D0101 0D050030 
+  30312E30 2C060355 04030C25 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 31333131 38343634 31301E17 0D323530 39323330 34333433 
+  345A170D 33353039 32333034 33343334 5A303031 2E302C06 03550403 0C25494F 
+  532D5365 6C662D53 69676E65 642D4365 72746966 69636174 652D3133 31313834 
+  36343130 82012230 0D06092A 864886F7 0D010101 05000382 010F0030 82010A02 
+  82010100 BA352C61 305D755C CDE32500 40ECC7E5 20D5062A 9FB79093 AE61FD49 
+  18562537 64F2A911 8DE6AA47 348A0A19 05C75BA9 C94AA9EE D5224176 A9F6D85F 
+  A5F421BD A33AA2FE 1E663EA8 D1AF8BD2 E94BC179 DEF504E9 B2E2002A 265BBCB0 
+  4C56E3E7 CD77B0A7 5CBD2146 6DF39895 5B6CBA11 DB8173FA B79478EA C4A94C3F 
+  78031689 250A6D62 5276BC27 B8A69DCB 84F26D06 676FD88D CE44FB2A 36536903 
+  2CF1B10A E62264D3 05DA6737 4F91F527 D41CC004 E876593D BFBE4D86 ADEF1108 
+  4177499E 989A9527 43EA1013 6570CCC9 594ED19D C2EC002C 4AC72A15 3A6CB467 
+  6D25CA8C EDC94E13 553B7F71 CC3BD473 F63F3E92 8993420B FAD08C9A 4254F643 
+  8218C9E9 02030100 01A35330 51301D06 03551D0E 04160414 B62D9FC5 83AA6E29 
+  81F523B0 B2ED2387 1B2B36A5 301F0603 551D2304 18301680 14B62D9F C583AA6E 
+  2981F523 B0B2ED23 871B2B36 A5300F06 03551D13 0101FF04 05300301 01FF300D 
+  06092A86 4886F70D 01010D05 00038201 010041D4 7AC93D27 BEA26173 5B04A79A 
+  B7E9151E 7CE3AE01 896DF0A3 5C5CB35F DF3CF0ED 73157015 21916219 5E5D9FF8 
+  A8C491FA 19397BD5 A877B2CE EB99C133 7F834BEC B827751C D08EC0FC 2EE54B64 
+  B13966CF 19A78FF6 18C94B47 3493288F 8BF66B54 4A9EC9BB 34B9BD86 4CEED9CD 
+  94AEB089 DF2B40CB 6868546F 52458585 D38ED073 7B143F2D ADC083E9 C9E28FD2 
+  CAA979C4 E5E5F182 D196F0F1 28FFFEF4 C6AC7600 F4EF1AC9 FAD1E38F 2C159B3D 
+  96B0C3B4 9712F235 CB7F0CA8 B4CD1078 26E90EDB 100C2D95 0508B48B B6B1AE1F 
+  386A6F46 68EEED53 11C2132E CCEB4029 10679A23 B3506F5E 171524E0 04E441F4 
+  98DA9C70 7AA9E22B 6717452E AF3F3781 54B1
+  	quit
+!
+!
+memory free low-watermark processor 79983
+!
+!
+spanning-tree mode rapid-pvst
+!
+enable secret 9 $9$xT8nctamGfR2vE$1Ta3YLLJ8t9UHf0VWjVfcUpMTLpIrAHptBU0XwPEdSQ
+!
+username R1 privilege 15 secret 9 $9$F5iMLeHV0JSqIU$RMbIffH2H.JDo3toPyjOeYXhvloWU/I9HidYmujMhqo
+!
+!
+!
+!
+!
+lldp run
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 1.1.1.1 255.255.255.255
+ ip ospf 1 area 0
+!
+interface Loopback1
+ no ip address
+!
+interface Ethernet0/0
+ ip address dhcp
+ ip ospf 1 area 0
+!
+interface Ethernet0/1
+ ip address 10.0.7.1 255.255.255.252
+ ip ospf 1 area 0
+!
+interface Ethernet0/2
+ ip address 10.0.7.5 255.255.255.252
+ ip ospf 1 area 0
+!
+interface Ethernet0/3
+ no ip address
+ shutdown
+!
+router ospf 1
+ redistribute static
+!
+ip forward-protocol nd
+ip forward-protocol udp
+!
+!
+no ip http server
+ip http secure-server
+ip ssh bulk-mode 131072
+ip ssh time-out 60
+ip ssh authentication-retries 2
+no logging btrace
+!
+!
+!
+control-plane
+!
+!
+banner motd ^CAcceso restringido^C
+!
+line con 0
+ logging synchronous
+line aux 0
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+!
+!
+end
