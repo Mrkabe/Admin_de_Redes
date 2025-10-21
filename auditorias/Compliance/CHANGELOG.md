@@ -1,0 +1,49 @@
+## 2025-10-20 19:48:22
+- Regla: Banner de Seguridad
+  - R1: '' → '100.0'
+  - R2: '' → '100.0'
+  - R3: '' → '100.0'
+- Regla: Calificacion Total
+  - R1: '' → '100.0'
+  - R2: '' → ''
+  - R3: '' → ''
+- Regla: Calificacion individual
+  - R1: '' → '100.0'
+  - R2: '' → '100.0'
+  - R3: '' → '100.0'
+- Regla: Ecriptacion de Contraseñas
+  - R1: '' → '100.0'
+  - R2: '' → '100.0'
+  - R3: '' → '100.0'
+- Regla: Enable protegido
+  - R1: '' → '100.0'
+  - R2: '' → '100.0'
+  - R3: '' → '100.0'
+- Regla: HTTPS habilitado
+  - R1: '' → '100.0'
+  - R2: '' → '100.0'
+  - R3: '' → '100.0'
+- Regla: LLDP habilitado
+  - R1: '' → '100.0'
+  - R2: '' → '100.0'
+  - R3: '' → '100.0'
+- Regla: Loopbacks Unicas
+  - R1: '' → '100.0'
+  - R2: '' → '100.0'
+  - R3: '' → '100.0'
+- Regla: No DNS Lookup
+  - R1: '' → '100.0'
+  - R2: '' → '100.0'
+  - R3: '' → '100.0'
+- Regla: No ruteos inseguros(Rip, IGRP, BGP)
+  - R1: '' → '100.0'
+  - R2: '' → '100.0'
+  - R3: '' → '100.0'
+- Regla: Tener Habilitado Login local en las lineas vty
+  - R1: '' → '100.0'
+  - R2: '' → '100.0'
+  - R3: '' → '100.0'
+- Regla: Unicamente conexion ssh
+  - R1: '' → '100.0'
+  - R2: '' → '100.0'
+  - R3: '' → '100.0'
