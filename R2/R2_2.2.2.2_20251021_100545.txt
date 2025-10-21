@@ -1,8 +1,8 @@
 Building configuration...
 
-Current configuration : 3574 bytes
+Current configuration : 3599 bytes
 !
-! Last configuration change at 16:02:52 UTC Tue Oct 21 2025
+! Last configuration change at 16:05:24 UTC Tue Oct 21 2025 by R2
 !
 version 17.16
 service timestamps debug datetime msec
@@ -15,6 +15,7 @@ boot-start-marker
 boot-end-marker
 !
 !
+no logging console
 no aaa new-model
 !
 !
