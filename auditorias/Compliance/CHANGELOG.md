@@ -167,3 +167,36 @@
   - R3: '' → '100.0'
 - Regla: Unicamente conexion ssh
   - R3: '' → '100.0'
+## 2025-10-21 10:05:26
+- Regla: Banner de Seguridad
+  - R3: '100.0' → ''
+- Regla: Calificacion individual
+  - R3: '100.0' → ''
+- Regla: Deshabilita el registro de mensajes en la consola
+  - R1: '' → '100.0'
+  - R2: '' → '100.0'
+- Regla: Ecriptacion de Contraseñas
+  - R3: '100.0' → ''
+- Regla: Enable protegido
+  - R3: '100.0' → ''
+- Regla: HTTPS habilitado
+  - R3: '100.0' → ''
+- Regla: LLDP habilitado
+  - R3: '100.0' → ''
+- Regla: Loopbacks Unicas
+  - R3: '100.0' → ''
+- Regla: No DNS Lookup
+  - R3: '100.0' → ''
+- Regla: No ruteos inseguros(Rip, IGRP, BGP)
+  - R3: '100.0' → ''
+- Regla: Tener Habilitado Login local en las lineas vty
+  - R1: '100.0' → ''
+  - R2: '100.0' → ''
+  - R3: '100.0' → ''
+- Regla: Unicamente conexion ssh
+  - R1: '100.0' → ''
+  - R2: '100.0' → ''
+  - R3: '100.0' → ''
+- Regla: optimización de interfaces en desuso
+  - R1: '' → '100.0'
+  - R2: '' → '100.0'
