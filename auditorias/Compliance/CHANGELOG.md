@@ -223,3 +223,12 @@
   - R3: '' → '100.0'
 - Regla: optimización de interfaces en desuso
   - R3: '' → '100.0'
+## 2025-10-21 10:36:02
+- Regla: Interfaces en desuso
+  - R1: '' → '100.0'
+  - R2: '' → '100.0'
+  - R3: '' → '100.0'
+- Regla: optimización de interfaces en desuso
+  - R1: '100.0' → ''
+  - R2: '100.0' → ''
+  - R3: '100.0' → ''
