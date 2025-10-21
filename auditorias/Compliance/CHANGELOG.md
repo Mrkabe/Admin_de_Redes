@@ -47,3 +47,10 @@
   - R1: '' → '100.0'
   - R2: '' → '100.0'
   - R3: '' → '100.0'
+## 2025-10-20 19:51:13
+- Regla: Calificacion Total
+  - R1: '100.0' → '96.67'
+- Regla: Calificacion individual
+  - R2: '100.0' → '90.0'
+- Regla: Loopbacks Unicas
+  - R2: '100.0' → '0.0'
