@@ -1,6 +1,8 @@
 Building configuration...
 
-Current configuration : 3507 bytes
+Current configuration : 3677 bytes
+!
+! Last configuration change at 02:21:55 UTC Tue Oct 21 2025
 !
 version 17.16
 service timestamps debug datetime msec
@@ -95,7 +97,6 @@ username R3 privilege 15 secret 9 $9$otjzAlUR21rADE$LEOWsBXVKAnJPDEd6cuCeIqYFzk1
 !
 !
 !
-lldp run
 ! 
 !
 !
@@ -115,6 +116,12 @@ lldp run
 interface Loopback0
  ip address 3.3.3.3 255.255.255.255
  ip ospf 100 area 0
+!
+interface Loopback8
+ ip address 5.4.5.4 255.255.255.255
+!
+interface Loopback11
+ ip address 4.4.4.4 255.255.255.255
 !
 interface Ethernet0/0
  no ip address
@@ -137,8 +144,8 @@ ip forward-protocol nd
 ip forward-protocol udp
 !
 !
-no ip http server
-ip http secure-server
+ip http server
+no ip http secure-server
 ip ssh bulk-mode 131072
 no logging btrace
 !
