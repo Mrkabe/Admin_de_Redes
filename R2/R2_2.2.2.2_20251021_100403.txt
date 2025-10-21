@@ -1,8 +1,8 @@
 Building configuration...
 
-Current configuration : 3578 bytes
+Current configuration : 3574 bytes
 !
-! Last configuration change at 02:30:55 UTC Tue Oct 21 2025
+! Last configuration change at 16:02:52 UTC Tue Oct 21 2025
 !
 version 17.16
 service timestamps debug datetime msec
@@ -15,7 +15,6 @@ boot-start-marker
 boot-end-marker
 !
 !
-no logging console
 no aaa new-model
 !
 !
@@ -119,7 +118,7 @@ interface Loopback0
  ip ospf 100 area 0
 !
 interface Ethernet0/0
- no ip address
+ ip address 192.168.1.1 255.255.255.252
  shutdown
 !
 interface Ethernet0/1
@@ -128,7 +127,6 @@ interface Ethernet0/1
 !
 interface Ethernet0/2
  no ip address
- shutdown
 !
 interface Ethernet0/3
  ip address 10.0.7.9 255.255.255.252
