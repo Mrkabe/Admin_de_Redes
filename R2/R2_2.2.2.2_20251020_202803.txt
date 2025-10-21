@@ -1,13 +1,12 @@
 Building configuration...
 
-Current configuration : 3578 bytes
+Current configuration : 3450 bytes
 !
 ! Last configuration change at 02:20:35 UTC Tue Oct 21 2025
 !
 version 17.16
 service timestamps debug datetime msec
 service timestamps log datetime msec
-service password-encryption
 !
 hostname R2-7
 !
@@ -30,7 +29,6 @@ no aaa new-model
 !
 !
 !
-no ip domain lookup
 ip domain name R2.local
 ip cef
 no login on-success log
@@ -89,7 +87,6 @@ memory free low-watermark processor 79983
 !
 spanning-tree mode rapid-pvst
 !
-enable secret 9 $9$MyGmdKrl0T8qNk$KrF5LiManYEOY2uqiRmO5RkrjvRb8nd0osvVAsDwAek
 !
 username R2 privilege 15 secret 9 $9$ZnrxmxScVpNfYk$wbgO/BE/xiOoKb2vAUyWbosLj7hjahpmuQ8KSS.1gZA
 !
@@ -136,6 +133,9 @@ interface Ethernet0/3
 !
 router ospf 100
 !
+router rip
+ network 10.0.0.0
+!
 ip forward-protocol nd
 ip forward-protocol udp
 !
@@ -150,7 +150,6 @@ no logging btrace
 control-plane
 !
 !
-banner motd ^CAcceso Restringido^C
 !
 line con 0
  logging synchronous
