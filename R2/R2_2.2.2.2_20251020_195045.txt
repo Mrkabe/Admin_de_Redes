@@ -1,8 +1,8 @@
 Building configuration...
 
-Current configuration : 3578 bytes
+Current configuration : 3621 bytes
 !
-! Last configuration change at 01:16:18 UTC Tue Oct 21 2025
+! Last configuration change at 01:50:31 UTC Tue Oct 21 2025 by R2
 !
 version 17.16
 service timestamps debug datetime msec
@@ -117,6 +117,9 @@ lldp run
 interface Loopback0
  ip address 2.2.2.2 255.255.255.255
  ip ospf 100 area 0
+!
+interface Loopback1
+ no ip address
 !
 interface Ethernet0/0
  no ip address
