@@ -429,3 +429,50 @@
   - R1: '100' → '100.0'
   - R2: '100' → '100.0'
   - R3: '100' → '100.0'
+## 2025-10-21 20:42:32
+- Regla: Banner de Seguridad
+  - R1: '100.0' → '100'
+  - R2: '100.0' → '100'
+  - R3: '100.0' → '100'
+- Regla: Calificacion Total
+  - R1: '100.0' → ''
+- Regla: Calificacion individual
+  - R1: '100.0' → ''
+  - R2: '100.0' → ''
+  - R3: '100.0' → ''
+- Regla: Deshabilita el registro de mensajes en la consola
+  - R1: '100.0' → '100'
+  - R2: '100.0' → '100'
+  - R3: '100.0' → '100'
+- Regla: Ecriptacion de Contraseñas
+  - R1: '100.0' → '100'
+  - R2: '100.0' → '100'
+  - R3: '100.0' → '100'
+- Regla: Enable protegido
+  - R1: '100.0' → '100'
+  - R2: '100.0' → '100'
+  - R3: '100.0' → '100'
+- Regla: HTTPS habilitado
+  - R1: '100.0' → '100'
+  - R2: '100.0' → '100'
+  - R3: '100.0' → '100'
+- Regla: LLDP habilitado
+  - R1: '100.0' → '100'
+  - R2: '100.0' → '100'
+  - R3: '100.0' → '100'
+- Regla: Loopbacks Unicas
+  - R1: '100.0' → '100'
+  - R2: '100.0' → '100'
+  - R3: '100.0' → '100'
+- Regla: No DNS Lookup
+  - R1: '100.0' → '100'
+  - R2: '100.0' → '100'
+  - R3: '100.0' → '100'
+- Regla: No ruteos inseguros(Rip, IGRP, BGP)
+  - R1: '100.0' → '100'
+  - R2: '100.0' → '100'
+  - R3: '100.0' → '100'
+- Regla: Timestamps en logs
+  - R1: '100.0' → '100'
+  - R2: '100.0' → '100'
+  - R3: '100.0' → '100'
