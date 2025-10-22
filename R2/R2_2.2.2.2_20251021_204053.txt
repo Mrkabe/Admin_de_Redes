@@ -1,13 +1,12 @@
 Building configuration...
 
-Current configuration : 3588 bytes
+Current configuration : 3550 bytes
 !
 ! Last configuration change at 02:14:58 UTC Wed Oct 22 2025
 !
 version 17.16
 service timestamps debug datetime msec
-service timestamps log datetime
-service password-encryption
+no service timestamps log
 !
 hostname R2-7
 !
@@ -97,7 +96,6 @@ username R2 privilege 15 secret 9 $9$ZnrxmxScVpNfYk$wbgO/BE/xiOoKb2vAUyWbosLj7hj
 !
 !
 !
-lldp run
 ! 
 !
 !
@@ -117,6 +115,9 @@ lldp run
 interface Loopback0
  ip address 2.2.2.2 255.255.255.255
  ip ospf 100 area 0
+!
+interface Loopback11
+ no ip address
 !
 interface Ethernet0/0
  no ip address
@@ -139,8 +140,8 @@ ip forward-protocol nd
 ip forward-protocol udp
 !
 !
-no ip http server
-ip http secure-server
+ip http server
+no ip http secure-server
 ip ssh bulk-mode 131072
 no logging btrace
 !
@@ -149,7 +150,6 @@ no logging btrace
 control-plane
 !
 !
-banner motd ^CAcceso Restringido^C
 !
 line con 0
  logging synchronous
