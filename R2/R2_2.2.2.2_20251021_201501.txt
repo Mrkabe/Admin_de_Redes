@@ -1,12 +1,12 @@
 Building configuration...
 
-Current configuration : 3582 bytes
+Current configuration : 3588 bytes
 !
-! Last configuration change at 01:56:58 UTC Wed Oct 22 2025
+! Last configuration change at 02:14:58 UTC Wed Oct 22 2025
 !
 version 17.16
 service timestamps debug datetime msec
-no service timestamps log
+service timestamps log datetime
 service password-encryption
 !
 hostname R2-7
