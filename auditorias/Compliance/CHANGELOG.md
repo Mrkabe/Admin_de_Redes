@@ -538,3 +538,12 @@
   - R3: '100.0' → '0.0'
 - Regla: Timestamps en logs
   - R3: '100.0' → '0.0'
+## 2025-10-21 21:22:33
+- Regla: Calificacion Total
+  - R1: '83.33' → '90.0'
+- Regla: Calificacion individual
+  - R2: '90.0' → '100.0'
+  - R3: '60.0' → '70.0'
+- Regla: Loopbacks Unicas
+  - R2: '0.0' → '100.0'
+  - R3: '0.0' → '100.0'
