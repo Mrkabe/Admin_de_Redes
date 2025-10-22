@@ -1,8 +1,8 @@
 Building configuration...
 
-Current configuration : 3599 bytes
+Current configuration : 3593 bytes
 !
-! Last configuration change at 16:05:24 UTC Tue Oct 21 2025 by R2
+! Last configuration change at 01:56:58 UTC Wed Oct 22 2025
 !
 version 17.16
 service timestamps debug datetime msec
@@ -119,15 +119,15 @@ interface Loopback0
  ip ospf 100 area 0
 !
 interface Ethernet0/0
- ip address 192.168.1.1 255.255.255.252
- shutdown
+ no ip address
 !
 interface Ethernet0/1
  ip address 10.0.7.2 255.255.255.252
  ip ospf 100 area 0
 !
 interface Ethernet0/2
- no ip address
+ ip address 192.168.1.2 255.255.255.252
+ shutdown
 !
 interface Ethernet0/3
  ip address 10.0.7.9 255.255.255.252
