@@ -1,12 +1,12 @@
 Building configuration...
 
-Current configuration : 3522 bytes
+Current configuration : 3570 bytes
 !
-! Last configuration change at 03:22:28 UTC Wed Oct 22 2025 by R3
+! Last configuration change at 03:25:08 UTC Wed Oct 22 2025 by R3
 !
 version 17.16
 service timestamps debug datetime msec
-no service timestamps log
+service timestamps log datetime
 service password-encryption
 !
 hostname R3-7
@@ -97,6 +97,7 @@ username R3 privilege 15 secret 9 $9$otjzAlUR21rADE$LEOWsBXVKAnJPDEd6cuCeIqYFzk1
 !
 !
 !
+lldp run
 ! 
 !
 !
@@ -148,6 +149,7 @@ no logging btrace
 control-plane
 !
 !
+banner motd ^CAcceso Restringido^C
 !
 line con 0
  logging synchronous
