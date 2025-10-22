@@ -1,7 +1,7 @@
 Regla,R1,R2,R3
 HTTPS habilitado,100.0,100.0,100.0
 Loopbacks Unicas,100.0,100.0,100.0
-Interfaces en desuso,100.0,100.0,100.0
+Timestamps en logs,100.0,100.0,100.0
 LLDP habilitado,100.0,100.0,100.0
 Banner de Seguridad,100.0,100.0,100.0
 Ecriptacion de Contraseñas,100.0,100.0,100.0
