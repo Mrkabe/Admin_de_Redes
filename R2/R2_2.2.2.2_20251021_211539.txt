@@ -1,13 +1,12 @@
 Building configuration...
 
-Current configuration : 3594 bytes
+Current configuration : 3497 bytes
 !
-! Last configuration change at 02:41:22 UTC Wed Oct 22 2025 by R2
+! Last configuration change at 03:07:19 UTC Wed Oct 22 2025
 !
 version 17.16
 service timestamps debug datetime msec
 service timestamps log datetime
-service password-encryption
 !
 hostname R2-7
 !
@@ -15,7 +14,6 @@ boot-start-marker
 boot-end-marker
 !
 !
-no logging console
 no aaa new-model
 !
 !
@@ -30,7 +28,6 @@ no aaa new-model
 !
 !
 !
-no ip domain lookup
 ip domain name R2.local
 ip cef
 no login on-success log
@@ -89,7 +86,6 @@ memory free low-watermark processor 79983
 !
 spanning-tree mode rapid-pvst
 !
-enable secret 9 $9$l6dTj3s0p1L1Gk$o.i1pftS1gr3qdy7CSpnLFeOuO.jlYjLeeUkVqwj1vQ
 !
 username R2 privilege 15 secret 9 $9$ZnrxmxScVpNfYk$wbgO/BE/xiOoKb2vAUyWbosLj7hjahpmuQ8KSS.1gZA
 !
@@ -118,6 +114,9 @@ interface Loopback0
  ip address 2.2.2.2 255.255.255.255
  ip ospf 100 area 0
 !
+interface Loopback11
+ ip address 4.4.4.4 255.255.255.255
+!
 interface Ethernet0/0
  no ip address
 !
@@ -135,11 +134,14 @@ interface Ethernet0/3
 !
 router ospf 100
 !
+router rip
+ network 10.0.0.0
+!
 ip forward-protocol nd
 ip forward-protocol udp
 !
 !
-no ip http server
+ip http server
 ip http secure-server
 ip ssh bulk-mode 131072
 no logging btrace
@@ -149,7 +151,6 @@ no logging btrace
 control-plane
 !
 !
-banner motd ^CAcceso Restringido^C
 !
 line con 0
  logging synchronous
