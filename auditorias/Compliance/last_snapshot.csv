@@ -1,13 +1,13 @@
 Regla,R1,R2,R3
 HTTPS habilitado,100.0,100.0,100.0
 Loopbacks Unicas,100.0,100.0,100.0
-Timestamps en logs,100.0,100.0,0.0
-LLDP habilitado,100.0,100.0,0.0
-Banner de Seguridad,100.0,100.0,0.0
+Timestamps en logs,100.0,100.0,100.0
+LLDP habilitado,100.0,100.0,100.0
+Banner de Seguridad,100.0,100.0,100.0
 Ecriptacion de Contraseñas,100.0,100.0,100.0
 Enable protegido,100.0,100.0,100.0
 Deshabilita el registro de mensajes en la consola,100.0,100.0,100.0
 "No ruteos inseguros(Rip, IGRP, BGP)",100.0,100.0,100.0
 No DNS Lookup,100.0,100.0,100.0
-Calificacion individual,100.0,100.0,70.0
-Calificacion Total,90.0,,
+Calificacion individual,100.0,100.0,100.0
+Calificacion Total,100.0,,
