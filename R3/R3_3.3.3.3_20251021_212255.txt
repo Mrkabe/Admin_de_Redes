@@ -1,8 +1,8 @@
 Building configuration...
 
-Current configuration : 3554 bytes
+Current configuration : 3522 bytes
 !
-! Last configuration change at 02:56:08 UTC Wed Oct 22 2025
+! Last configuration change at 03:22:28 UTC Wed Oct 22 2025 by R3
 !
 version 17.16
 service timestamps debug datetime msec
@@ -116,9 +116,6 @@ username R3 privilege 15 secret 9 $9$otjzAlUR21rADE$LEOWsBXVKAnJPDEd6cuCeIqYFzk1
 interface Loopback0
  ip address 3.3.3.3 255.255.255.255
  ip ospf 100 area 0
-!
-interface Loopback11
- no ip address
 !
 interface Ethernet0/0
  no ip address
